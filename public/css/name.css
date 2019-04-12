@@ -1,0 +1,14 @@
+body div.Name {
+    height: 100vh;
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+body div.Name h1 {
+    font-size: 9vw;
+    color: var(--main-fg-color);
+    text-align: center;
+    display: table-cell;
+    vertical-align:middle;
+}

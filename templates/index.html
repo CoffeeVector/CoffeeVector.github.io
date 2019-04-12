@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/name.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel='icon' href='favicon.ico' type='image/x-icon' />
+    <title>Kevin Zheng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-131270924-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+</head>
+
+<body>
+    <img class="background" alt="background" src="backgrounds/weekday.jpg"/>
+    <div class="Name">
+        <h1>Kevin Zheng</h1>
+    </div>
+    <div class="About">
+        <h1>About</h1>
+        <div style="margin-left: 20vw; margin-right: 20vw">
+            <div class="ResumeProfile">
+                <div class="ProfileContainer">
+                    <img class="ProfileImage" alt="Profile" src="profile.jpg" />
+                </div>
+                <a class="ResumeLink" target="_blank" rel="noopener noreferrer" href="https://coffeevector.xyz/Resume/Resume.pdf" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}" style="bottom-border: 0px">
+                    <img alt="Resume.jpg" class="ResumeImage" src="https://raw.githubusercontent.com/CoffeeVector/Resume/master/Resume.jpg" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}" />
+                </a>
+            </div>
+            <div class="Description">
+                <h1 class="DescriptionTitle">Student</h1>
+                <p>
+                I'm a sophomore at the University of California, Merced, studying <i>Computer Science and Engineering</i> and <i>Physics with Mathematical Physics emphasis</i>.
+                I'm interested in both fields, as well as multidisciplinary topics such as computational physics or quantum computing.
+                </p>
+            </div>
+            <div style="clear:both; margin-top:-1px; height:1px; overflow:hidden;">
+            </div>
+        </div>
+    </div>
+    <div style="height: 15vw">
+    </div>
+    <div style="text-align: left;
+            font-size: 1vw;
+            color: var(--main-text-color);
+            font-family: 'Computer Modern';">
+        {% for project in projects %}
+        <div class="Project">
+            <h2 class="ProjectTitle">
+                {{ project.title }}
+                <span>
+                    <a target="_blank" rel="noopener noreferrer" href="{{ project.git }}" onclick="{{ ga('Social Media', project.git)|safe }}">
+                        <img class="GithubImage" alt="github.png" src="githubLight.png" />
+                    </a>
+                </span>
+            </h2>
+            <div class="ImageDescriptionContainer">
+                {% if project.image %}
+                <div class="Image">
+                    <img alt="projectImage.png" src="{{ project.image }}">
+                </div>
+                {% endif %}
+                <div class="Description">
+                    {{ project.description|safe }}
+                </div>
+            </div>
+        </div>
+        <div style="height: 5vw">
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="Footer">
+        <h1 class="ContactHeader">Contact</h1>
+        <div class="ContactContainer" style=>
+            <p>Looking to hire an intern?</p>
+            <p>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/coffeevector" onclick="{{ ga('Recruitment', 'Github Clicked')|safe }}">
+                    github.com/coffeevector
+                </a>
+            </p>
+            <p onclick="{{ ga('Recruitment', 'Email Clicked') }}">zhengkevin256@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>

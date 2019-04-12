@@ -1,0 +1,54 @@
+:root {
+    --main-bg-color: #272822;
+    --main-fg-color: #3f3f3f;
+    /*succulent contras*/
+    --main-text-color: #f8f8f2;
+    /*--main-link-color: #66d9ef;*/
+    --main-link-color: #90ee90;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--main-bg-color)
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-fg-color);
+    border-radius: 3.5px;
+}
+
+@font-face {
+    font-family: Computer Modern;
+    src: url('../fonts/cmunrm.ttf');
+}
+
+i {
+    color: var(--main-text-color);
+}
+
+body {
+    font-family: Computer Modern;
+    background-color: --main-fg-color;
+    margin: 0;
+}
+
+body img.background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+a {
+    color: var(--main-link-color);
+    border-bottom: 1px solid var(--main-text-color);
+    text-decoration: none;
+}
