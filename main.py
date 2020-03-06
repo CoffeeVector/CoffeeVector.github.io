@@ -17,6 +17,7 @@ env.globals.update(ga=ga)
 
 
 index_template = env.get_template('index.html.jinja')
+css_template = env.get_template('styles.css.jinja')
 
 with open('build/index.html', 'w+') as f:
     with open("projects.json", "r") as p:
@@ -29,3 +30,6 @@ with open('build/index.html', 'w+') as f:
         f.write(index_template.render(
             projects=projects
         ))
+
+with open('build/styles.css', 'w+') as f:
+    f.write(css_template.render())
