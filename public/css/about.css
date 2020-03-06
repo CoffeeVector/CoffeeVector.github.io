@@ -1,8 +1,3 @@
-div.Split {
-    margin-left: 20vw;
-    margin-right: 20vw;
-}
-
 div.ResumeProfile {
     width: 100%;
     position: relative;
@@ -47,12 +42,6 @@ div.Description h1.DescriptionTitle {
 }
 
 @media screen and (max-width:800px) {
-    body div.About div.Split {
-        margin-left: 5px;
-        margin-right: 5px;
-        display: inline;
-    }
-
     body div.About div.ResumeProfile {
         padding-top: 0;
     }
