@@ -36,33 +36,7 @@
     <div class="Name">
         <h1>Kevin Zheng</h1>
     </div>
-    {% with title="test", content="content" %}
-        {% include "section.html.jinja" %}
-    {% endwith %}
-    <div class="About">
-        <h1>About</h1>
-        <div style="margin-left: 20vw; margin-right: 20vw">
-            <div class="ResumeProfile">
-                <div class="ProfileContainer">
-                    <img class="ProfileImage" alt="Profile" src="profile.jpg" />
-                </div>
-                <a class="ResumeLink" target="_blank" rel="noopener noreferrer" href="https://coffeevector.xyz/Resume/Resume.pdf" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}" style="bottom-border: 0px">
-                    <img alt="Resume.jpg" class="ResumeImage" src="https://raw.githubusercontent.com/CoffeeVector/Resume/master/Resume.jpg" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}" />
-                </a>
-            </div>
-            <div class="Description">
-                <h1 class="DescriptionTitle">Student</h1>
-                <p>
-                I'm a sophomore at the University of California, Merced, studying <i>Computer Science and Engineering</i> and <i>Physics with Mathematical Physics emphasis</i>.
-                I'm interested in both fields, as well as multidisciplinary topics such as computational physics or quantum computing.
-                </p>
-            </div>
-            <div style="clear:both; margin-top:-1px; height:1px; overflow:hidden;">
-            </div>
-        </div>
-    </div>
-    <div style="height: 15vw">
-    </div>
+    {% include "about.html.jinja" %}
     <div style="text-align: left;
             font-size: 1vw;
             color: var(--main-text-color);

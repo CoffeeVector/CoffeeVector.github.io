@@ -1,5 +1,11 @@
 {% extends "section.html" %}
 {% block title %}
+    {{ super () }}
+    <span>
+        <a target="_blank" rel="noopener noreferrer" href="{{ project.git }}" onclick="{{ ga('Social Media', project.git)|safe }}">
+            <img class="GithubImage" alt="github.png" src="githubLight.png" />
+        </a>
+    </span>
 {% endblock %}
 
 {% block content %}
