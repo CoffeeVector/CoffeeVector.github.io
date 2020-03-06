@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/name.css">
     <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/section.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel='icon' href='favicon.ico' type='image/x-icon' />
     <title>Kevin Zheng</title>
@@ -35,6 +36,9 @@
     <div class="Name">
         <h1>Kevin Zheng</h1>
     </div>
+    {% with title="test", content="content" %}
+        {% include "section.html.jinja" %}
+    {% endwith %}
     <div class="About">
         <h1>About</h1>
         <div style="margin-left: 20vw; margin-right: 20vw">

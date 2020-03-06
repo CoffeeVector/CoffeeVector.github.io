@@ -1,0 +1,35 @@
+div.section {
+    text-align: left;
+    font-size: 14pt;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: 'Computer Modern';
+    border-bottom: 2px solid var(--main-bg-color);
+    border-top: 2px solid var(--main-bg-color);
+    overflow: hidden;
+    box-shadow: 0px 0px 35px 15px rgba(0, 0, 0, 0.5);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h1.section-title {
+    margin-left: 20vw;
+    margin-right: 20vw
+}
+
+div.section-content {
+    margin-left: 20vw;
+    margin-right: 20vw
+}
+
+@media screen and (max-width:800px) {
+    h1.section-title {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    div.section-content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

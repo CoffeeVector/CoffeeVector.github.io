@@ -16,7 +16,7 @@ def ga(eventCategory, eventAction):
 env.globals.update(ga=ga)
 
 
-index_template = env.get_template('index.html')
+index_template = env.get_template('index.html.jinja')
 
 with open('build/index.html', 'w+') as f:
     with open("projects.json", "r") as p:
