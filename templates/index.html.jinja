@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 
-{% include "header.html.jinja" %}
+{% include "components/header.html.jinja" %}
 <body>
     <img class="background" alt="background" src="backgrounds/weekday.jpg"/>
     <div class="Name">
         <h1>Kevin Zheng</h1>
     </div>
-    {% include "about.html.jinja" %}
+    {% include "components/about.html.jinja" %}
     <div style="text-align: left;
             font-size: 1vw;
             color: var(--main-text-color);
             font-family: 'Computer Modern';">
         {% for project in projects %}
-            {% include "project.html.jinja" %}
+            {% include "components/project.html.jinja" %}
         {% endfor %}
     </div>
-    {% include "footer.html.jinja" %}
+    {% include "components/footer.html.jinja" %}
 </body>
 </html>
