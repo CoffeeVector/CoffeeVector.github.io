@@ -1,19 +1,5 @@
 [
     {
-        "title": "HackMerced: On my way — 2019",
-        "description": [
-            "<p>\n",
-            "                Used ReactJS to to make an alternative graduation requirement planner.",
-            "            We paid careful attention to ensuring that the site used the minimum amount of server usage, because the current one is definitely not fast enough.<br>",
-            "            <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://coffeevector.xyz/HackMerced2019/\">Check it out!</a>",
-            "            </p>",
-            "            <p>",
-            "                Check out my teammate <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/warmshowers1\">Alex Woersching!</a> Also, thanks to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.linkedin.com/in/nestor-ojeda/\">Nestor Ojeda!</a>!",
-            "            </p>"
-        ],
-        "git": "https://github.com/CoffeeVector/HackMerced2019/"
-    },
-    {
         "title": "Rubiks Cube Machine Learning — 2019",
         "description": [
             "<p>",

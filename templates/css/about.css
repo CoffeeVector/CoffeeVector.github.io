@@ -1,9 +1,9 @@
-div.ResumeProfile {
+div.resume-profile {
     width: 100%;
     position: relative;
 }
 
-div.ResumeProfile div.ProfileContainer {
+div.resume-profile div.profile-container {
     position: absolute;
     top: 9%;
     left: 0%;
@@ -13,64 +13,41 @@ div.ResumeProfile div.ProfileContainer {
     pointer-events: none;
 }
 
-div.ResumeProfile img.ProfileImage {
+div.resume-profile img.profile-image {
     width: 100%;
     transition: 0.5s;
     pointer-events: none;
     clip-path: circle(35% at center);
 }
 
-div.ResumeProfile:hover img.ProfileImage {
+div.resume-profile:hover img.profile-image {
     opacity: 0;
     clip-path: circle(50% at center);
 }
 
-div.ResumeProfile img.ResumeImage {
+div.resume-profile img.resume-image {
     float: left;
     padding-right: 1%;
     padding-bottom: 1%;
     width: 50%;
 }
 
-div.Description {
-    padding: 1em;
-}
-
-div.Description h1.DescriptionTitle {
+h1.description-title{
     text-align: center;
-    margin: 0;
 }
 
 @media screen and (max-width:800px) {
-    body div.About div.ResumeProfile {
-        padding-top: 0;
-    }
-
-    div.ResumeProfile img.ResumeImage {
+    div.resume-profile img.resume-image {
         position: relative;
         width: calc(100% - 10px);
-        margin-left: 5px;
-        margin-right: 5px;
-
     }
 
-    div.ResumeProfile div.ProfileContainer {
+    div.resume-profile div.profile-container {
         position: relative;
         width: 100%;
     }
 
-    div.ProfileContainer img.ProfileImage {
+    div.profile-container img.profile-image {
         clip-path: circle(40% at center);
-    }
-
-    div.ResumeProfile:hover img.ProfileImage {
-        opacity: 100;
-        clip-path: circle(40% at center);
-    }
-
-    a.ResumeLink {
-        margin-left: 0;
-        margin-right: 0;
-        border-bottom: none;
     }
 }

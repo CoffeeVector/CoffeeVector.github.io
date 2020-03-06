@@ -7,14 +7,8 @@
         <h1>Kevin Zheng</h1>
     </div>
     {% include "components/about.html.jinja" %}
-    <div style="text-align: left;
-            font-size: 1vw;
-            color: var(--main-text-color);
-            font-family: 'Computer Modern';">
-        {% for project in projects %}
-            {% include "components/project.html.jinja" %}
-        {% endfor %}
-    </div>
-    {% include "components/footer.html.jinja" %}
+    {% for project in projects %}
+        {% include "components/project.html.jinja" %}
+    {% endfor %}
 </body>
 </html>

@@ -3,18 +3,18 @@
     {{ project.title }}
     <span>
         <a target="_blank" rel="noopener noreferrer" href="{{ project.git }}" onclick="{{ ga('Social Media', project.git)|safe }}">
-            <img class="GithubImage" alt="github.png" src="githubLight.png" />
+            <img class="github-image" alt="github-image" src="githubLight.png" />
         </a>
     </span>
 {% endblock %}
 
 {% block content %}
     {% if project.image %}
-    <div class="Image">
-        <img alt="projectImage.png" src="{{ project.image }}">
+    <div class="project-image">
+        <img alt="project-image" src="{{ project.image }}">
     </div>
     {% endif %}
-    <div class="Description">
+    <div>
         {{ project.description|safe }}
     </div>
 {% endblock %}
