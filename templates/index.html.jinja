@@ -16,18 +16,6 @@
             {% include "project.html.jinja" %}
         {% endfor %}
     </div>
-
-    <div class="Footer">
-        <h1 class="ContactHeader">Contact</h1>
-        <div class="ContactContainer" style=>
-            <p>Looking to hire an intern?</p>
-            <p>
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/coffeevector" onclick="{{ ga('Recruitment', 'Github Clicked')|safe }}">
-                    github.com/coffeevector
-                </a>
-            </p>
-            <p onclick="{{ ga('Recruitment', 'Email Clicked') }}">zhengkevin256@gmail.com</p>
-        </div>
-    </div>
+    {% include "footer.html.jinja" %}
 </body>
 </html>
