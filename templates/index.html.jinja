@@ -42,28 +42,7 @@
             color: var(--main-text-color);
             font-family: 'Computer Modern';">
         {% for project in projects %}
-        <div class="Project">
-            <h2 class="ProjectTitle">
-                {{ project.title }}
-                <span>
-                    <a target="_blank" rel="noopener noreferrer" href="{{ project.git }}" onclick="{{ ga('Social Media', project.git)|safe }}">
-                        <img class="GithubImage" alt="github.png" src="githubLight.png" />
-                    </a>
-                </span>
-            </h2>
-            <div class="ImageDescriptionContainer">
-                {% if project.image %}
-                <div class="Image">
-                    <img alt="projectImage.png" src="{{ project.image }}">
-                </div>
-                {% endif %}
-                <div class="Description">
-                    {{ project.description|safe }}
-                </div>
-            </div>
-        </div>
-        <div style="height: 5vw">
-        </div>
+            {% include "project.html.jinja" %}
         {% endfor %}
     </div>
 

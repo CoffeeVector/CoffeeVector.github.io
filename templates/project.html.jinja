@@ -1,6 +1,6 @@
-{% extends "section.html" %}
+{% extends "section.html.jinja" %}
 {% block title %}
-    {{ super () }}
+    {{ project.title }}
     <span>
         <a target="_blank" rel="noopener noreferrer" href="{{ project.git }}" onclick="{{ ga('Social Media', project.git)|safe }}">
             <img class="GithubImage" alt="github.png" src="githubLight.png" />
@@ -9,4 +9,12 @@
 {% endblock %}
 
 {% block content %}
+    {% if project.image %}
+    <div class="Image">
+        <img alt="projectImage.png" src="{{ project.image }}">
+    </div>
+    {% endif %}
+    <div class="Description">
+        {{ project.description|safe }}
+    </div>
 {% endblock %}
