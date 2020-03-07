@@ -1,9 +1,6 @@
 #!venv/bin/python3
 import json
 import jinja2
-from jinja2 import Template
-from jinja2 import PackageLoader
-from jinja2 import select_autoescape
 
 env = jinja2.Environment(
     loader = jinja2.PackageLoader('main', 'templates'),
@@ -25,7 +22,7 @@ with open('build/index.html', 'w+') as f:
         projects = json.loads(content)
         for project in projects:
             if project["description"]:
-                project["description"] = "\n".join(project["description"])
+                project["description"] = jinja2.Markup("\n".join(project["description"]))
 
         f.write(index_template.render(
             projects=projects
