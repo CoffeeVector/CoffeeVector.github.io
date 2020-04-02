@@ -1,9 +1,24 @@
-all:
-	if [ ! -d venv ]; then python3 -m venv venv; venv/bin/pip3 install -r requirements.txt; fi
+.DEFAULT_TARGET: $(build_directory)/index.html
+.PHONY: copy_static_files
+
+build_directory  = build
+static_directory = public
+
+$(build_directory)/index.html: $(build_directory) app copy_static_files
+	venv/bin/python3 -c "import app.website; app.website.main(build_directory='$(build_directory)')"
+
+$(build_directory): venv
 	@echo "Building..."
-	./main.py
-	cp -r public/* build/
+	mkdir -p $@
+	touch $@
+
+venv:
+	@echo "Setting up virtual environment..."
+	python3 -m venv venv; venv/bin/pip3 install -r requirements.txt;
+
+copy_static_files: $(build_directory) $(static_directory)
+	cp -r $(static_directory)/* $(build_directory)/
 
 clean:
-	@echo "Clean up..."
-	rm -r build/*
+	@echo "Removing build directory ($(build_directory))..."
+	rm -r build
