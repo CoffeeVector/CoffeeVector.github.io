@@ -2,7 +2,7 @@
 .PHONY: copy_static_files
 
 build_directory  = build
-static_directory = public
+static_directory = static
 
 $(build_directory)/index.html: $(build_directory) app copy_static_files
 	venv/bin/python3 -c "import app.website; app.website.main(build_directory='$(build_directory)')"
