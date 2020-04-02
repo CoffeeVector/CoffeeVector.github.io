@@ -11,7 +11,7 @@
 {% block content %}
     {% if project.image %}
     <div class="project-image">
-        <img alt="project-image" src="{{ project.image }}">
+        <a style="border-bottom: none" target="_blank" rel="noopener noreferrer" href="{{ project.git }}" onclick="{{ ga('Social Media', project.git)|safe }}"><img alt="project-image" src="{{ project.image }}"></a>
     </div>
     {% endif %}
     <div>
