@@ -20,5 +20,9 @@ copy_static_files: $(build_directory) $(static_directory)
 	cp -r $(static_directory)/* $(build_directory)/
 
 clean:
+	@echo "Removing contents of $(build_directory) (leaving .git/ untouched)..."
+	rm -r build/*
+
+clean_hard:
 	@echo "Removing build directory ($(build_directory))..."
-	rm -r build
+	rm -rf build
