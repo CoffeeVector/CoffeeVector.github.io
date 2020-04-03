@@ -1,12 +1,25 @@
 <div class="section">
-    <h1 class="section-title">
+<h2 class="{{ css_prefix }}section-title">
     {% block title%}
         {{ title }}
     {% endblock %}
-    </h1>
-    <div class="section-content">
+    </h2>
+    <div class="{{ css_prefix }}section-content">
     {% block content %}
-        {{ content }}
+        <div class="{{ css_prefix }}section-image">
+            {% block image %}
+                {% if image %}
+                    <img alt="{{ css_prefix }}section-image" src="{{ image }}">
+                {% endif %}
+            {% endblock %}
+        </div>
+        <div class="{{ css_prefix }}section-text">
+            {% block text %}
+                {% if text %}
+                    {{ text }}
+                {% endif %}
+            {% endblock %}
+        </div>
     {% endblock %}
     </div>
 </div>

@@ -1,25 +1,20 @@
 {% extends "components/section.html.jinja" %}
-
 {% block title %}
     About
 {% endblock %}
 
-{% block content %}
-    <div class="resume-profile">
-        <div class="profile-container">
-            <img class="profile-image" alt="Profile" src="profile.jpg" />
-        </div>
-        <a target="_blank" rel="noopener noreferrer" href="https://coffeevector.xyz/Resume/Resume.pdf" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}" style="bottom-border: 0px">
-            <img alt="Resume.jpg" class="resume-image" src="https://raw.githubusercontent.com/CoffeeVector/Resume/master/Resume.jpg" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}" />
-        </a>
-    </div>
-    <div>
-        <h1 class="description-title">Student</h1>
-        <p>
-        I'm a sophomore at the University of California, Merced, studying <i>Computer Science and Engineering</i> and <i>Physics with Mathematical Physics emphasis</i>.
-        I'm interested in both fields, as well as multidisciplinary topics such as computational physics or quantum computing.
-        </p>
-    </div>
-    <div style="clear:both; margin-top:-1px; height:1px; overflow:hidden;">
-    </div>
+{% block image %}
+<div class="resume-profile">
+    <img class="profile-image" width="100%" alt="Profile" src="profile.jpg" />
+    <a target="_blank" rel="noopener noreferrer" style="border-bottom: none" href="https://coffeevector.xyz/Resume/Resume.pdf" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}">
+        <img alt="Resume.jpg" class="resume-image" width="100%" src="https://raw.githubusercontent.com/CoffeeVector/Resume/master/Resume.jpg" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}" />
+    </a>
+</div>
+{% endblock %}
+
+{% block text %}
+    <p>
+    I'm a sophomore at the University of California, Merced, studying <i>Computer Science and Engineering</i> and <i>Physics with Mathematical Physics emphasis</i>.
+    I'm interested in both fields, as well as multidisciplinary topics such as computational physics or quantum computing.
+    </p>
 {% endblock %}
