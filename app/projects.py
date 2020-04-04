@@ -37,6 +37,6 @@ projects = [
             </p>
         """,
         "git": "https://github.com/CoffeeVector/SPARKFinalProject/",
-        "image": "projectImages/sparkProject.png"
+        "image": "project-images/sparkProject.png"
     }
 ]

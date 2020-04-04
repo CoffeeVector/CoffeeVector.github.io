@@ -1,0 +1,21 @@
+.frontpage {
+    height: 100vh;
+    text-align: center;
+    position: relative
+}
+
+.frontpage h1 {
+    font-size: 9vw;
+    color: var(--main-fg-color);
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.wallpaper-credit {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+}
