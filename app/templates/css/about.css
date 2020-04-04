@@ -1,6 +1,7 @@
 div.resume-profile {
     width: 75%;
     position: relative;
+    margin: auto
 }
 
 div.resume-profile img.profile-image {
