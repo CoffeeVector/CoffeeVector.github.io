@@ -54,3 +54,7 @@ a {
     border-bottom: 1px solid var(--main-text-color);
     text-decoration: none;
 }
+
+p {
+    text-align: justify
+}
