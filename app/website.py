@@ -40,8 +40,6 @@ env.globals.update(
 index_template = env.get_template('index.html.jinja')
 css_template = env.get_template('styles.css.jinja')
 
-
-
 def main(build_directory='build', theme='allure'):
     from app.projects import projects
     for project in projects:
