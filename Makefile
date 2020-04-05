@@ -1,11 +1,13 @@
 .DEFAULT_TARGET: $(build_directory)/index.html
 .PHONY: copy_static_files
 
+theme = allure
+
 build_directory  = build
 static_directory = static
 
 $(build_directory)/index.html: $(build_directory) app copy_static_files
-	venv/bin/python3 -c "import app.website; app.website.main(build_directory='$(build_directory)')"
+	venv/bin/python3 -c "import app.website; app.website.main(build_directory='$(build_directory)', theme='$(theme)')"
 
 $(build_directory): venv
 	@echo "Building..."

@@ -5,7 +5,9 @@
 
 {% block image %}
 <div class="resume-profile">
-    <img class="profile-image" width="100%" alt="Profile" src="profile.jpg" />
+    <div class="profile-wrapper">
+        <img class="profile-image" width="100%" alt="Profile" src="{{ theme.profile }}" />
+    </div>
     <a target="_blank" rel="noopener noreferrer" style="border-bottom: none" href="https://coffeevector.xyz/Resume/Resume.pdf" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}">
         <img alt="Resume.jpg" class="resume-image" width="100%" src="https://raw.githubusercontent.com/CoffeeVector/Resume/master/Resume.jpg" onclick="{{ ga('Recruitment', 'Resume Viewed')|safe }}" />
     </a>

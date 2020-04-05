@@ -1,24 +1,30 @@
 div.resume-profile {
     width: 75%;
     position: relative;
-    margin: auto
+    margin: auto;
+    filter: drop-shadow(0px 1vw 0.5vw rgba(0, 0, 0, 0.5)); /* Gives resume a shadow */
+}
+
+div.resume-profile div.profile-wrapper { /* Requires wrapper because profile image has clip path and drop shadow */
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0, -50%);
+    filter: drop-shadow(0px 1vw 0.5vw rgba(0, 0, 0, 0.5)); /* Gives profile image a shadow */
+    pointer-events: none;
 }
 
 div.resume-profile img.profile-image {
-    position: absolute;
-    top: 14%;
-    left: 0;
-    filter: drop-shadow(0px 1vw 0.5vw rgba(0, 0, 0, 0.5));
-    z-index: 1;
-    pointer-events: none;
-    width: 100%;
+    clip-path: circle(40% at center);/* 50 / 1.2941 = 38.64; the letterpaper ratio */
+    margin: auto;
     transition: 0.5s;
-    clip-path: circle(35% at center);
+    width: 75%;
+    pointer-events: none;
 }
 
 div.resume-profile:hover img.profile-image {
     opacity: 0;
-    clip-path: circle(50% at center);
+    width: 100%;
 }
 
 div.resume-profile img.resume-image {
