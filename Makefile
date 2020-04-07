@@ -1,7 +1,7 @@
 .DEFAULT_TARGET: $(build_directory)/index.html
 .PHONY: copy_static_files
 
-theme = allure
+theme ?= the-minimalist
 
 build_directory  = build
 static_directory = static
