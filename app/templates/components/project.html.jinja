@@ -7,7 +7,7 @@
     {{ project.title }}
     <span>
         <a target="_blank" rel="noopener noreferrer" href="{{ project.git }}" onclick="{{ ga('Social Media', project.git)|safe }}">
-            <img class="github-image" alt="github-image" src="githubLight.png" />
+            <img class="github-image" alt="github-image" src="{{ static_file("githubLight.png") }}" />
         </a>
     </span>
 {% endblock %}

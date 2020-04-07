@@ -2,7 +2,7 @@
 {% import "themes/{theme}.jinja".format(theme=theme) as theme %}
 
 {% if not theme.profile is defined %}
-    {% set theme.profile="profile-green.jpg" %}
+    {% set theme.profile=static_file("profile-green.jpg") %}
 {% endif %}
 
 <html>

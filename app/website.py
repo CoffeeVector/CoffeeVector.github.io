@@ -28,6 +28,12 @@ def link_color(r, g, b):
     hsv = colorsys.rgb_to_hsv(r, g, b)
     return colorsys.hsv_to_rgb(hsv[0], 0.95, hsv[2])
 
+static_files_in_use = []
+
+def static_file(static_directory, filepath):
+    f =  f'{static_directory}/{filepath}'
+    static_files_in_use.append(f)
+    return f
 
 env.globals.update(
     ga=ga,
@@ -40,7 +46,12 @@ env.globals.update(
 index_template = env.get_template('index.html.jinja')
 css_template = env.get_template('styles.css.jinja')
 
-def main(build_directory='build', theme='allure'):
+def main(build_directory='build', static_directory='static', theme='allure'):
+
+    env.globals.update(
+        static_file = lambda x: static_file(static_directory, x)
+    )
+
     from app.projects import projects
     for project in projects:
         if project["description"]:
@@ -53,3 +64,5 @@ def main(build_directory='build', theme='allure'):
     print(css_template.render(
         theme=theme
     ), file=open(f'{build_directory}/styles.css', 'w+'))
+
+    print('\n'.join(static_files_in_use), file=open(f'{build_directory}/static_files.txt', 'w+'))

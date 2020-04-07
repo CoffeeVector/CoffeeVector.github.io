@@ -9,7 +9,7 @@
         <div class="{{ css_prefix }}section-image">
             {% block image %}
                 {% if image %}
-                    <img alt="{{ css_prefix }}section-image" src="{{ image }}">
+                    <img alt="{{ css_prefix }}section-image" src="{{ static_file(image) }}">
                 {% endif %}
             {% endblock %}
         </div>

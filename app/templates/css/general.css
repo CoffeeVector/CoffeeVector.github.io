@@ -34,7 +34,7 @@
 
 @font-face {
     font-family: Computer Modern;
-    src: url('fonts/cmunrm.ttf');
+    src: url('{{ static_file("fonts/cmunrm.ttf") }}');
 }
 
 body {
