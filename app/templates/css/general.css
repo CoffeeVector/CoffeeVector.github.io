@@ -4,17 +4,13 @@
     /*succulent contras*/
     --main-text-color: #ffffff;
     --main-link-color: var(--main-text-color);
-    --color-0: {{ theme.colors[0] }};
-    --color-1: {{ theme.colors[1] }};
-    --color-2: {{ theme.colors[2] }};
-    --color-3: {{ theme.colors[3] }};
-    --color-4: {{ theme.colors[4] }};
+    {% for i in range(5) %}
+    --color-{{ i }}: {{ theme.colors[i] }};
+    {% endfor %}
 
-    --c-color-0: {{ rgb_to_hex(*complementary(*hex_to_rgb(theme.colors[0]))) }};
-    --c-color-1: {{ rgb_to_hex(*complementary(*hex_to_rgb(theme.colors[1]))) }};
-    --c-color-2: {{ rgb_to_hex(*complementary(*hex_to_rgb(theme.colors[2]))) }};
-    --c-color-3: {{ rgb_to_hex(*complementary(*hex_to_rgb(theme.colors[3]))) }};
-    --c-color-4: {{ rgb_to_hex(*complementary(*hex_to_rgb(theme.colors[4]))) }}
+    {% for i in range(5) %}
+    --c-color-{{ i }}: {{ rgb_to_hex(*complementary(*hex_to_rgb(theme.colors[i]))) }};
+    {% endfor %}
 }
 
 ::-webkit-scrollbar {
