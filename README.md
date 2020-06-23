@@ -1,9 +1,20 @@
 ## My Personal Website
 
--   Contains an about me
--   Contains my Resume
--   Contains various projects with more lengthy descriptions for each
+Written in Jinja2. Produces static files.
 
-# Todo
+# Install instructions
 
-- [ ] Add professional
+If you want nothing but defaults:
+`make`
+
+If you want a specific theme:
+`make theme={theme}`
+
+`{theme}` can be anything from the following:
+ - `allure`
+ - `golden-air`
+ - `infinities`
+ - `the-minimalist`
+ - `unwavering`
+
+After the command is run, the static files will be found in the `build` directory.
